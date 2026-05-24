@@ -12,14 +12,14 @@ commonRouter.post("/login", async (req, res, next) => {
     let userCred = req.body;
     console.log("Login request received for:", userCred.email);
     let { token, user } = await authenticate(userCred);
-    
+
     // save token as httpOnly cookie
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "lax",
-      secure: false, // Set to true if using HTTPS and not localhost
+      sameSite: "none",
+      secure: true,
     });
-    
+
     console.log("Login successful for:", userCred.email);
     res.status(200).json({ message: "Login Successful", token, payload: user })
   } catch (err) {
@@ -32,8 +32,8 @@ commonRouter.post("/login", async (req, res, next) => {
 commonRouter.get("/logout", async (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    sameSite: "lax",
-    secure: false,
+    sameSite: "none",
+    secure: true,
   });
   res.status(200).json({ message: "Logout Successful" })
 })
