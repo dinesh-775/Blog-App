@@ -2,7 +2,7 @@
 
 A full-stack blog platform allowing users to read, author, and manage blog posts. The application features a distinct separation between Frontend and Backend, utilizing modern web technologies.
 
-## 🚀 Features
+## Features
 
 - **Role-Based Access Control**: Separate portals and functionalities for Users, Authors, and Admins.
 - **Authentication & Authorization**: Secure login and session management using JSON Web Tokens (JWT) and HTTP-only cookies.
@@ -10,7 +10,7 @@ A full-stack blog platform allowing users to read, author, and manage blog posts
 - **State Management**: Efficient frontend state handling using Zustand.
 - **Responsive UI**: Modern, clean, and responsive design built with React 19 and Tailwind CSS v4.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend (`/blog-app-frontend`)
 - **Framework**: React 19 built with Vite
@@ -29,7 +29,7 @@ A full-stack blog platform allowing users to read, author, and manage blog posts
 - **File Uploads**: Multer, Cloudinary
 - **Environment**: dotenv
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Capstone-Project/
@@ -47,44 +47,9 @@ Capstone-Project/
     └── package.json        # Frontend dependencies
 ```
 
-## ⚙️ Local Setup & Installation
+##  Local Setup & Installation
 
 ### Prerequisites
 - Node.js installed on your machine.
 - MongoDB instance (local or Atlas cluster).
 - Cloudinary account for media storage.
-
-### 1. Backend Setup
-1. Navigate to the backend directory:
-   ```bash
-   cd blog-app-backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file in the `blog-app-backend` folder with the necessary variables:
-   ```env
-   PORT=4000
-   DB_URL=your_mongodb_connection_string
-   # Add your JWT secrets and Cloudinary API credentials
-   ```
-4. Start the backend server:
-   ```bash
-   npm start
-   ```
-
-### 2. Frontend Setup
-1. Open a new terminal and navigate to the frontend directory:
-   ```bash
-   cd blog-app-frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the Vite development server:
-   ```bash
-   npm run dev
-   ```
-4. Open the provided local URL (usually `http://localhost:5173`) in your browser.
